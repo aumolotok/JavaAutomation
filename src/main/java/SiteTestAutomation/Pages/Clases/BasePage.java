@@ -13,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.function.Supplier;
 
-public abstract class BasePage implements SearchContext {
+public abstract class BasePage implements Page {
     private Browser browser;
 
     public Browser getBrowser() {
@@ -42,7 +42,8 @@ public abstract class BasePage implements SearchContext {
     }
 
     protected <T> T initElement(Class<T> clazz, By by) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Constructor<T> constr = clazz.getConstructor(BasePage.class, By.class );
+        Class<Page> clazzz = Page.class;
+        Constructor<T> constr = clazz.getConstructor(Page.class, By.class );
         return constr.newInstance(this, by);
     }
 }

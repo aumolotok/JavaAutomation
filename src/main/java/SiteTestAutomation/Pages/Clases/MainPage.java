@@ -8,7 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class MainPage extends BasePage {
 
-    private Button button = initElement(Button.class, By.xpath(""));
+    private Button button = initElement(Button.class, By.xpath(" \"//*[@class = \"wg-header__sticky-menu\"]//button[contains(@class,'wg-header__free-trial-button')]\""));
 
     public void clickButton(){
         button.click();
