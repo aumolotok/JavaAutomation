@@ -12,7 +12,7 @@ public class BaseElement {
     protected Page hostPage;
     protected By locator;
 
-    protected WebElement getWrappedElement(){
+    public WebElement getWrappedElement(){
         return wrappedElementSupplier.get();
     };
 
@@ -20,6 +20,7 @@ public class BaseElement {
 
     public BaseElement(Page hostPage, By by){
         parent = (SearchContext)hostPage;
+        this.hostPage = hostPage;
         locator = by;
     }
 
