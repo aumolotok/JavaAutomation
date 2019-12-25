@@ -7,9 +7,9 @@ import org.openqa.selenium.By;
 
 import java.lang.reflect.InvocationTargetException;
 
-public class StartTrialPage extends BasePage{
+public class StartTrialPage extends BaseIndexPage{
 
-    public  Survey survey = initElement(Survey.class, By.xpath("//form[@name='survey-form']"));
+    public  Survey survey = initElement(Survey.class, By.xpath(".//form[@name='survey-form']"));
 
     public SurveySuccess surveySuccess = initElement(SurveySuccess.class, By.xpath(".//div[contains(@class, 'survey-success')]"));
 
