@@ -12,6 +12,8 @@ public class BaseElement {
     protected Page hostPage;
     protected By locator;
 
+    public By getLocator(){return locator;}
+
     public WebElement getWrappedElement(){
         return wrappedElementSupplier.get();
     };
@@ -28,6 +30,12 @@ public class BaseElement {
         this.parent = parent;
         this.hostPage = hostPage;
         locator = by;
+    }
+
+    public boolean isVisible(){return  getWrappedElement().isDisplayed();}
+
+    public String getAttribute(String attributeName) {
+        return getWrappedElement().getAttribute(attributeName);
     }
 
     private Supplier getSupplier(By by){
