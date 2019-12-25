@@ -17,8 +17,6 @@ public class StartTrialPage extends BaseIndexPage{
         return surveySuccess.getSuccessMessage();
     }
 
-
-
     public void fillSurvey(){
         survey.fillQuestions();
     }

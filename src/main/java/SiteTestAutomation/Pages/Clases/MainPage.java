@@ -2,7 +2,6 @@ package SiteTestAutomation.Pages.Clases;
 
 import SiteTestAutomation.Core.Clases.Browser.Browser;
 import SiteTestAutomation.Elements.Clases.StartTrialForm;
-import SiteTestAutomation.Elements.complexElements.StickyMenu;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 

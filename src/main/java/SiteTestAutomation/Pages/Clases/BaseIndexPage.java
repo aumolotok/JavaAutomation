@@ -1,7 +1,6 @@
 package SiteTestAutomation.Pages.Clases;
 
 import SiteTestAutomation.Core.Clases.Browser.Browser;
-import SiteTestAutomation.Elements.complexElements.ComplexElement;
 import SiteTestAutomation.Elements.complexElements.StickyMenu;
 import SiteTestAutomation.Elements.complexElements.footer.Footer;
 import org.openqa.selenium.By;

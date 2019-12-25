@@ -1,6 +1,5 @@
 package SiteTestAutomation.Elements.complexElements;
 
-import SiteTestAutomation.Elements.Clases.BaseElement;
 import SiteTestAutomation.Elements.Clases.Label;
 import SiteTestAutomation.Pages.Interfaces.Page;
 import org.openqa.selenium.By;

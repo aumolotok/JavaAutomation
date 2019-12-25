@@ -5,7 +5,6 @@ import SiteTestAutomation.Elements.Clases.BaseElement;
 import SiteTestAutomation.Pages.Interfaces.Page;
 import com.google.common.base.Suppliers;
 import org.openqa.selenium.By;
-import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 
 import java.lang.reflect.Constructor;
