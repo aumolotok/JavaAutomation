@@ -27,7 +27,7 @@ public class ComplexElement extends BaseElement implements SearchContext {
         return getWrappedElement().findElement(by);
     }
 
-    protected <T> T initElement(Class<T> clazz, By by) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    protected <T extends BaseElement> T initElement(Class<T> clazz, By by) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Constructor<T> constr = clazz.getConstructor(Page.class, SearchContext.class ,By.class );
         return constr.newInstance(this.hostPage, this, by);
     }
