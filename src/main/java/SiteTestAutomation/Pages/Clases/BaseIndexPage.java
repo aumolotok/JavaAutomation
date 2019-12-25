@@ -12,7 +12,7 @@ public class BaseIndexPage extends BasePage {
 
     public Footer footer = initElement(Footer.class, By.xpath(".//div[@class=\"wg-footer\"]"));
 
-    public StickyMenu stickyMenu = initElement(StickyMenu.class, By.xpath("//*[@class = \"wg-header__sticky-menu\"]"));
+    protected StickyMenu stickyMenu = initElement(StickyMenu.class, By.xpath("//*[@class = \"wg-header__sticky-menu\"]"));
 
 
     public BaseIndexPage(Browser browser) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {

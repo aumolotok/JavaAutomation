@@ -9,10 +9,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Survey extends ComplexElement {
 
-    public Button submitSurvey = initElement(Button.class, By.xpath(".//button[contains(@class, 'js-survey-submit')]"));
-
-
-
+    private Button submitSurvey = initElement(Button.class, By.xpath(".//button[contains(@class, 'js-survey-submit')]"));
 
     public Survey(Page hostPage, By by) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         super(hostPage, by);
@@ -26,5 +23,9 @@ public class Survey extends ComplexElement {
         getWrappedElement().findElement(By.xpath(".//button[text() = \"Very interested\"]")).click();
         getWrappedElement().findElement(By.xpath("//button[text() = \"1–5\"]")).click();
         getWrappedElement().findElement(By.xpath("//button[text() = \"Yes\"]")).click();
+    }
+
+    public void submit(){
+        submitSurvey.click();
     }
 }

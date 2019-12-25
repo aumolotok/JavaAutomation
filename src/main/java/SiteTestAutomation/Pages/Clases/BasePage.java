@@ -52,6 +52,10 @@ public abstract class BasePage implements Page {
         browser.waitForDisappear(seconds, element.getLocator());
     }
 
+    public void waitToDisappear(BaseElement element){
+        browser.waitForDisappear(3, element.getLocator());
+    }
+
     public void scrollToElement(BaseElement element){
         browser.scrollToElement(element.getWrappedElement());
     }
