@@ -11,7 +11,7 @@ public class SurveySuccess extends ComplexElement {
 
     private Label successLabel = initElement(Label.class, By.xpath(".//h3"));
 
-    public String getSuccessMessage(){
+    public String getSuccessMessage() {
         return successLabel.getText();
     }
 

@@ -6,8 +6,8 @@ import org.openqa.selenium.SearchContext;
 
 public class Label extends BaseElement {
 
-    public String getText(){
-       return getWrappedElement().getText();
+    public String getText() {
+        return getWrappedElement().getText();
     }
 
     public Label(Page hostPage, By by) {

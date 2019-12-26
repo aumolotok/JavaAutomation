@@ -19,13 +19,13 @@ public class Survey extends ComplexElement {
         super(hostPage, parent, by);
     }
 
-    public void fillQuestions(){
+    public void fillQuestions() {
         getWrappedElement().findElement(By.xpath(".//button[text() = \"Very interested\"]")).click();
         getWrappedElement().findElement(By.xpath("//button[text() = \"1–5\"]")).click();
         getWrappedElement().findElement(By.xpath("//button[text() = \"Yes\"]")).click();
     }
 
-    public void submit(){
+    public void submit() {
         submitSurvey.click();
     }
 }

@@ -6,11 +6,13 @@ import org.openqa.selenium.SearchContext;
 
 public class Input extends BaseElement {
 
-    public void sendKeys(String string){
+    public void sendKeys(String string) {
         getWrappedElement().sendKeys(string);
     }
 
-    public void click(){ getWrappedElement().click();}
+    public void click() {
+        getWrappedElement().click();
+    }
 
     public Input(Page hostPage, By by) {
         super(hostPage, by);

@@ -20,7 +20,7 @@ public class MainPage extends BaseIndexPage {
     }
 
     @Step("Click Start Trial Header Button")
-    public void clickStartTrialHeaderButton(){
+    public void clickStartTrialHeaderButton() {
         stickyMenu.startTrial.click();
     }
 
