@@ -16,9 +16,8 @@ public class MainPage extends BaseIndexPage {
 
     @Step("Fill trial email and send")
     public StartTrialPage sentEmailForTrial(String email) throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException, InterruptedException {
-        trialForm.emailInput.sendKeys("abcd+wpt@wriketask.qaa");
+        trialForm.emailInput.sendKeys(email);
         trialForm.sendEmailButton.click();
-        //getBrowser().waitForDisappear(stickyMenu.getLocator());
         return openPage(StartTrialPage.class);
     }
 
