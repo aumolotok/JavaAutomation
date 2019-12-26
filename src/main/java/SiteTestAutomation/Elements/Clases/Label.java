@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 
 public class Label extends BaseElement {
-
+    
     public String getText() {
         return getWrappedElement().getText();
     }
