@@ -1,4 +1,4 @@
-package SiteTestAutomation.Elements.complexElements.footer;
+package SiteTestAutomation.Elements.complexElements;
 
 import SiteTestAutomation.Elements.Clases.SvgButton;
 import SiteTestAutomation.Elements.complexElements.ComplexElement;

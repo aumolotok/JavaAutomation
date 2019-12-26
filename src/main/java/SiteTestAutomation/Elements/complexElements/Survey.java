@@ -2,6 +2,7 @@ package SiteTestAutomation.Elements.complexElements;
 
 import SiteTestAutomation.Elements.Clases.Button;
 import SiteTestAutomation.Pages.Interfaces.Page;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 
@@ -19,12 +20,13 @@ public class Survey extends ComplexElement {
         super(hostPage, parent, by);
     }
 
+    @Step("Fill questions")
     public void fillQuestions() {
         getWrappedElement().findElement(By.xpath(".//button[text() = \"Very interested\"]")).click();
         getWrappedElement().findElement(By.xpath("//button[text() = \"1–5\"]")).click();
         getWrappedElement().findElement(By.xpath("//button[text() = \"Yes\"]")).click();
     }
-
+    @Step("Submit form")
     public void submit() {
         submitSurvey.click();
     }
