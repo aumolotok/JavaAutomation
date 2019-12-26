@@ -1,7 +1,9 @@
 package SiteTestAutomation.Pages.Clases;
 
 import SiteTestAutomation.Core.Clases.Browser.Browser;
+import SiteTestAutomation.Core.Clases.Browser.PageFacility;
 import SiteTestAutomation.Elements.Clases.BaseElement;
+import SiteTestAutomation.Pages.Clases.PageAnnotations.UrlPattern;
 import SiteTestAutomation.Pages.Interfaces.Page;
 import com.google.common.base.Suppliers;
 import org.openqa.selenium.By;
@@ -46,7 +48,7 @@ public abstract class BasePage implements Page {
     }
 
     protected <T extends BasePage> T openPage(Class<T> pageType) throws InterruptedException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        return pageType.getConstructor(browser.getClass()).newInstance(browser);
+        return PageFacility.openPage(pageType, browser);
     }
 
     public void waitToDisappear(int seconds, BaseElement element) {
@@ -67,5 +69,13 @@ public abstract class BasePage implements Page {
 
     public void scrollDown() {
         browser.scrollDown();
+    }
+
+    public String getCurrentUrl() {
+        return browser.getUrl();
+    }
+
+    public String getPatternUrl() {
+        return getClass().getAnnotation(UrlPattern.class).url();
     }
 }
