@@ -2,7 +2,7 @@ package SiteTestAutomation.Pages.Clases;
 
 import SiteTestAutomation.Core.Clases.Browser.Browser;
 import SiteTestAutomation.Elements.Clases.Label;
-import SiteTestAutomation.Elements.complexElements.Survey;
+import SiteTestAutomation.Elements.complexElements.SurveyForm;
 import SiteTestAutomation.Elements.complexElements.SurveySuccess;
 import SiteTestAutomation.Pages.Clases.PageAnnotations.UrlPattern;
 import io.qameta.allure.Step;
@@ -13,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 @UrlPattern(url = "https://www.wrike.com/resend/")
 public class StartTrialPage extends BaseIndexPage {
 
-    private Survey survey = initElement(Survey.class, By.xpath(".//form[@name='survey-form']"));
+    private SurveyForm survey = initElement(SurveyForm.class, By.xpath(".//form[@name='survey-form']"));
 
     public SurveySuccess surveySuccess = initElement(SurveySuccess.class, By.xpath(".//div[contains(@class, 'survey-success')]"));
 

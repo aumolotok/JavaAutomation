@@ -12,13 +12,13 @@ import java.lang.reflect.InvocationTargetException;
 
 @Epic("Wrike trials")
 @Feature("Wrike trial mail workflow")
-public class MainPageTest extends BaseTest{
+public class MainTrialFlowTests extends BaseTest{
 
     @Test
     @DisplayName("Check Trial Submit and Tweeter Button")
     @Description("Extremely useful description of testing test")
     @Severity(SeverityLevel.CRITICAL)
-    public void clickButton() throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException, InterruptedException {
+    public void checkTrialEmailSendingWorkflow() throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException, InterruptedException {
         String email = StringUtils.generateString( 10) + "+wpt@wriketask.qaa";
 
         MainPage main = PageFacility.openPageByPageUrl(MainPage.class, browser);
