@@ -7,7 +7,9 @@ import org.openqa.selenium.SearchContext;
 
 public class Button extends BaseElement implements LinkElement {
 
-    public void click(){ getWrappedElement().click();}
+    public void click() {
+        getWrappedElement().click();
+    }
 
     public Button(Page hostPage, By by) {
         super(hostPage, by);

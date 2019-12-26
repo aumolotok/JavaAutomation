@@ -12,33 +12,37 @@ public class BaseElement {
     protected Page hostPage;
     protected By locator;
 
-    public By getLocator(){return locator;}
+    public By getLocator() {
+        return locator;
+    }
 
-    public WebElement getWrappedElement(){
+    public WebElement getWrappedElement() {
         return wrappedElementSupplier.get();
-    };
+    }
 
     private Supplier<WebElement> wrappedElementSupplier = () -> parent.findElement(locator);
 
-    public BaseElement(Page hostPage, By by){
-        parent = (SearchContext)hostPage;
+    public BaseElement(Page hostPage, By by) {
+        parent = (SearchContext) hostPage;
         this.hostPage = hostPage;
         locator = by;
     }
 
-    public BaseElement(Page hostPage, SearchContext parent, By by){
+    public BaseElement(Page hostPage, SearchContext parent, By by) {
         this.parent = parent;
         this.hostPage = hostPage;
         locator = by;
     }
 
-    public boolean isVisible(){return  getWrappedElement().isDisplayed();}
+    public boolean isVisible() {
+        return getWrappedElement().isDisplayed();
+    }
 
     public String getAttribute(String attributeName) {
         return getWrappedElement().getAttribute(attributeName);
     }
 
-    private Supplier getSupplier(By by){
+    private Supplier getSupplier(By by) {
         return () -> parent.findElement(by);
     }
 

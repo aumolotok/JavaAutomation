@@ -14,7 +14,6 @@ public class StartTrialForm extends ComplexElement {
     public Input emailInput = initElement(Input.class, By.xpath(".//input"));
 
 
-
     public StartTrialForm(Page hostPage, By by) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         super(hostPage, by);
     }
