@@ -33,21 +33,12 @@ public abstract class BasePage implements Page {
         return browser.findElements(by);
     }
 
-    private Supplier getSupplier(By by) {
-        return () -> browser.findElement(by);
-    }
-
-    private Supplier gerMemorizedSupplier(By by) {
-        return Suppliers.memoize(() -> browser.findElement(by));
-    }
-
     protected <T extends BaseElement> T initElement(Class<T> clazz, By by) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class<Page> clazzz = Page.class;
         Constructor<T> constr = clazz.getConstructor(Page.class, By.class);
         return constr.newInstance(this, by);
     }
 
-    protected <T extends BasePage> T openPage(Class<T> pageType) throws InterruptedException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    protected <T extends BasePage> T openPage(Class<T> pageType) {
         return PageFacility.openPage(pageType, browser);
     }
 
@@ -56,11 +47,7 @@ public abstract class BasePage implements Page {
     }
 
     public void waitToDisappear(BaseElement element) {
-        browser.waitForDisappear(3, element.getLocator());
-    }
-
-    public void scrollToElement(BaseElement element) {
-        browser.scrollToElement(element.getWrappedElement());
+        waitToDisappear(3, element);
     }
 
     public void scrollUp() {

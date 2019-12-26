@@ -10,10 +10,6 @@ public class Input extends BaseElement {
         getWrappedElement().sendKeys(string);
     }
 
-    public void click() {
-        getWrappedElement().click();
-    }
-
     public Input(Page hostPage, By by) {
         super(hostPage, by);
     }

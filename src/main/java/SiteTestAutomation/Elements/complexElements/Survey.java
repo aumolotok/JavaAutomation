@@ -12,14 +12,6 @@ public class Survey extends ComplexElement {
 
     private Button submitSurvey = initElement(Button.class, By.xpath(".//button[contains(@class, 'js-survey-submit')]"));
 
-    public Survey(Page hostPage, By by) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        super(hostPage, by);
-    }
-
-    public Survey(Page hostPage, SearchContext parent, By by) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        super(hostPage, parent, by);
-    }
-
     @Step("Fill questions")
     public void fillQuestions() {
         getWrappedElement().findElement(By.xpath(".//button[text() = \"Very interested\"]")).click();
@@ -29,5 +21,13 @@ public class Survey extends ComplexElement {
     @Step("Submit form")
     public void submit() {
         submitSurvey.click();
+    }
+
+    public Survey(Page hostPage, By by) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        super(hostPage, by);
+    }
+
+    public Survey(Page hostPage, SearchContext parent, By by) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        super(hostPage, parent, by);
     }
 }

@@ -10,7 +10,6 @@ public class SvgButton extends Button {
         return getWrappedElement().findElement(By.xpath(".//*[name()='use']")).getAttribute("xlink:href");
     }
 
-
     public SvgButton(Page hostPage, By by) {
         super(hostPage, by);
     }

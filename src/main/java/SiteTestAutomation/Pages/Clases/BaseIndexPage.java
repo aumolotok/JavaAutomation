@@ -13,7 +13,6 @@ public class BaseIndexPage extends BasePage {
 
     protected StickyMenu stickyMenu = initElement(StickyMenu.class, By.xpath("//*[@class = \"wg-header__sticky-menu\"]"));
 
-
     public BaseIndexPage(Browser browser) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         super(browser);
     }

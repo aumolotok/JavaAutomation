@@ -2,7 +2,6 @@ package SiteTestAutomation.Elements.Clases;
 
 import SiteTestAutomation.Pages.Interfaces.Page;
 import com.google.common.base.Supplier;
-import com.google.common.base.Suppliers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
@@ -32,21 +31,5 @@ public class BaseElement {
         this.parent = parent;
         this.hostPage = hostPage;
         locator = by;
-    }
-
-    public boolean isVisible() {
-        return getWrappedElement().isDisplayed();
-    }
-
-    public String getAttribute(String attributeName) {
-        return getWrappedElement().getAttribute(attributeName);
-    }
-
-    private Supplier getSupplier(By by) {
-        return () -> parent.findElement(by);
-    }
-
-    private Supplier getMemorizedSupplier(By by) {
-        return Suppliers.memoize(() -> parent.findElement(by));
     }
 }

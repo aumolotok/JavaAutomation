@@ -15,7 +15,6 @@ public class SurveySuccess extends ComplexElement {
         return successLabel.getText();
     }
 
-
     public SurveySuccess(Page hostPage, By by) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         super(hostPage, by);
     }
