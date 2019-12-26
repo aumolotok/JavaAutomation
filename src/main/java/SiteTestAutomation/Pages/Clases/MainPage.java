@@ -18,6 +18,7 @@ public class MainPage extends BaseIndexPage {
     public StartTrialPage sentEmailForTrial(String email) throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException, InterruptedException {
         trialForm.emailInput.sendKeys(email);
         trialForm.sendEmailButton.click();
+        waitToDisappear(trialForm);
         return openPage(StartTrialPage.class);
     }
 

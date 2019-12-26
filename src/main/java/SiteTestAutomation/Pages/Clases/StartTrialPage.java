@@ -17,6 +17,7 @@ public class StartTrialPage extends BaseIndexPage {
     public SurveySuccess surveySuccess = initElement(SurveySuccess.class, By.xpath(".//div[contains(@class, 'survey-success')]"));
 
     private Label trialEmail = initElement(Label.class, By.xpath(".//p[@class=\"h3 subtitle\"]/b[@class=\"email\"]"));
+    private Label trialEmail = initElement(Label.class, By.xpath(".//p[@class=\"h4 subtitle\"]"));
 
     public String getSuccessMessage() {
         return surveySuccess.getSuccessMessage();
